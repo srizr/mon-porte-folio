@@ -1,0 +1,159 @@
+#pdp {
+    height: 300px;
+    margin-top: -325px;
+    margin-left: 80px;
+}
+
+
+
+h2 {
+    z-index: 1;
+}
+
+a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.lien {
+    text-decoration: underline;
+    color: #4741F0;
+}
+
+/* #################### header #################### */
+h1 {
+    color: #333333;
+    font-size: 54px;
+    /* ajuste la hauteur de ligne */
+}
+
+#navigation_bar {
+    margin-top: -4.5%;
+    text-align: right;
+    font-size: 28px;
+    word-spacing: 25px;
+    justify-content: right;
+    position: relative;
+}
+
+#nav_bar {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    gap: 20px;
+}
+
+#nav_bar a:hover {
+    background: linear-gradient(75deg, rgb(167, 127, 207), #3333);
+    color: #fff;
+    border-radius: 8px;
+    padding: 5px;
+    text-decoration-line: underline;
+}
+
+header {
+    margin: -8px;
+    padding: 10px;
+    background: linear-gradient(-150deg, rgba(68, 125, 232, 0.5), rgba(181, 123, 164, 0.5));
+}
+
+/*#################" main ###############"*/
+section {
+    padding: 0.5%;
+    border: 1.5px solid #333333;
+    border-radius: 12px;
+    margin: 32px auto;
+    background: white;
+    max-width: 900px;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    z-index: 1;
+}
+
+main {
+    margin-top: 110px;
+    margin-bottom: 110px;
+    position: relative;
+    flex: 1;
+
+}
+
+section>article {
+    /* afficher chaque article en grille 2 colonnes :
+    - dans project.html l'article unique aligne les <p> (gauche / droite)
+    - dans motus.html, les deux articles frères restent côte à côte grâce à section (display:flex) */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 8px;
+    align-items: center;
+
+    /* si plusieurs articles frères existent (motus), qu'ils partagent l'espace */
+    flex: 1;
+    position: relative;
+}
+
+/* nouvelles règles pour les classes utilisées dans le HTML (tu as des <p class="cadre_gauche"> et <p class="cadre_droit">) */
+.cadre_gauche {
+    grid-column: 1;
+    padding-left: 16px;
+    box-sizing: border-box;
+}
+
+.cadre_droit {
+    grid-column: 2;
+    margin: 0;
+    padding-right: 16px;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-image: url('../images/vg.png');
+    background-repeat: no-repeat;
+    background-size: 100.5% 420px;
+    background-position: center 40%;
+    display: flex;
+    /* ajouté */
+    flex-direction: column;
+    /* ajouté */
+    min-height: 100vh;
+}
+
+footer {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    /* min 32px, préférentiel 18% de la hauteur vue, max 160px */
+    /* Espace au-dessus du footer */
+}
+
+
+
+figcaption {
+    display: none;
+
+}
+
+#apropos::before {
+    content: "👤";
+    /* Emoji représentant "À propos" */
+    margin-right: 8px;
+    /* Espace entre l'icône et le texte du titre */
+}
+
+#competences::before {
+    content: "💻";
+    /* Emoji représentant les compétences informatiques */
+    margin-right: 8px;
+}
+
+img:hover {
+
+    transform: translateY(-5px);
+    /* Soulève légèrement l’article au survol */
+    box-shadow: 0 8px 20px rgba(122, 105, 233, 0.2);
+    /* Ombre plus marquée lors du hover */
+    transform: scale(1.5);
+}
