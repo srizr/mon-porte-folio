@@ -1,13 +1,13 @@
 #pdp {
     height: 300px;
-    margin-top: -325px;
-    margin-left: 80px;
+    margin-top: -335px;
+    margin-left: 70px;
 }
 
-
-
-h2 {
-    z-index: 1;
+@media (max-width: 768px) {
+    #pdp {
+        height: 30px
+    }
 }
 
 a {
@@ -20,10 +20,38 @@ a {
     color: #4741F0;
 }
 
+figcaption {
+    display: none;
+
+}
+
+img:hover {
+
+    transform: translateY(-5px);
+    /* Soulève légèrement l’article au survol */
+    box-shadow: 0 8px 20px rgba(122, 105, 233, 0.2);
+    /* Ombre plus marquée lors du hover */
+    transform: scale(1.5);
+}
+
+body {
+    position: relative;
+    background-image: url('../images/vg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 420px;
+    background-position: center 40%;
+    display: flex;
+    /* ajouté */
+    flex-direction: column;
+    /* ajouté */
+    min-height: 100vh;
+}
+
 /* #################### header #################### */
 h1 {
     color: #333333;
-    font-size: 54px;
+    font-size: clamp(2rem, 1.75rem + 1vw, 2.5rem);
+
     /* ajuste la hauteur de ligne */
 }
 
@@ -43,6 +71,28 @@ h1 {
     gap: 20px;
 }
 
+@media (max-width: 1025px) {
+    #nav_bar {
+        padding-top: 50px;
+        display: grid;
+        justify-content: center;
+        list-style: none;
+        gap: 20px;
+    }
+
+    #nav_bar li {
+        text-align: center;
+    }
+
+    #nav_bar a {
+        background: linear-gradient(75deg, rgb(167, 127, 207), #3333);
+        color: #fff;
+        border-radius: 8px;
+        padding: 5px;
+        text-decoration-line: underline;
+    }
+}
+
 #nav_bar a:hover {
     background: linear-gradient(75deg, rgb(167, 127, 207), #3333);
     color: #fff;
@@ -53,7 +103,8 @@ h1 {
 
 header {
     margin: -8px;
-    padding: 10px;
+    padding: 18px 8px;
+    width: 100%;
     background: linear-gradient(-150deg, rgba(68, 125, 232, 0.5), rgba(181, 123, 164, 0.5));
 }
 
@@ -77,6 +128,11 @@ main {
     position: relative;
     flex: 1;
 
+}
+
+h2 {
+    z-index: 1;
+    font-size: clamp(2rem, 1.75rem + 1vw, 2.5rem);
 }
 
 section>article {
@@ -108,18 +164,10 @@ section>article {
     box-sizing: border-box;
 }
 
-body {
-    position: relative;
-    background-image: url('../images/vg.png');
-    background-repeat: no-repeat;
-    background-size: 100.5% 420px;
-    background-position: center 40%;
-    display: flex;
-    /* ajouté */
-    flex-direction: column;
-    /* ajouté */
-    min-height: 100vh;
-}
+
+
+/* ############## footer ############## */
+
 
 footer {
     position: relative;
@@ -127,33 +175,4 @@ footer {
     margin-top: auto;
     /* min 32px, préférentiel 18% de la hauteur vue, max 160px */
     /* Espace au-dessus du footer */
-}
-
-
-
-figcaption {
-    display: none;
-
-}
-
-#apropos::before {
-    content: "👤";
-    /* Emoji représentant "À propos" */
-    margin-right: 8px;
-    /* Espace entre l'icône et le texte du titre */
-}
-
-#competences::before {
-    content: "💻";
-    /* Emoji représentant les compétences informatiques */
-    margin-right: 8px;
-}
-
-img:hover {
-
-    transform: translateY(-5px);
-    /* Soulève légèrement l’article au survol */
-    box-shadow: 0 8px 20px rgba(122, 105, 233, 0.2);
-    /* Ombre plus marquée lors du hover */
-    transform: scale(1.5);
 }

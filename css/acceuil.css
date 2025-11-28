@@ -1,0 +1,39 @@
+/* ############ main ################"*/
+
+
+#apropos::before {
+    content: "👤";
+    /* Emoji représentant "À propos" */
+    margin-right: 8px;
+    /* Espace entre l'icône et le texte du titre */
+}
+
+#competences::before {
+    content: "💻";
+    /* Emoji représentant les compétences informatiques */
+    margin-right: 8px;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* ######### LI ########### */
+main ul {
+
+    display: grid;
+    margin-left: 10%;
+}
+
+main ul li span {
+    font-size: 24px;
+    border-radius: 2px;
+
+
+}
+
+main ul li span:hover {
+    background-color: rgb(193, 189, 189);
+    text-decoration: underline;
+    color: white;
+}

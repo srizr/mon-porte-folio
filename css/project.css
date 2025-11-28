@@ -1,0 +1,47 @@
+.img_project {
+    height: 150;
+    margin: 8px;
+}
+
+#cadre_droit ul {
+    height: 400px;
+}
+
+
+/*########## MOTUS ##########*/
+#motus {
+    z-index: 1;
+    margin-left: 450px;
+}
+
+@media (max-width: 1025px) {
+    #img2 {
+        height: 25px;
+        margin: 2px;
+        width: 60%;
+    }
+
+    .img_project {
+        height: 75px;
+        margin: 2px;
+    }
+
+    #motus {
+        margin-left: 175px;
+    }
+
+    .cadre_gauche {
+        height: 200px;
+        margin: 4px;
+        padding-left: 8px;
+        top: 25%;
+        position: relative;
+    }
+}
+
+
+#img2 {
+    height: 50px;
+    margin: 8px;
+    width: 90%;
+}
