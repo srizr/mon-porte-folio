@@ -5,9 +5,9 @@ section {
 h2 {
     text-align: center;
     background-color: hsl(0, 0%, 95%);
-    padding: 4px;
-    margin-left: 40%;
-    margin-right: 40%;
+    padding: 12px;
+    margin-left: 35%;
+    margin-right: 35%;
     border: 2px solid #333
 }
 
@@ -88,7 +88,7 @@ main ul li:hover {
 
 /* En mobile : passe à 1 colonne */
 @media (max-width: 1025px) {
-    ul {
+    main ul {
         grid-template-columns: 1fr;
         /* 1 seule colonne sur petit écran */
     }
