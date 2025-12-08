@@ -6,6 +6,8 @@
     display: block;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+    border-radius: 5px;
+    border: 2px #333333;
 
 }
 
@@ -53,6 +55,7 @@ h1 {
     font-size: clamp(2rem, 1.75rem + 1vw, 2.5rem);
     margin: 0;
     line-height: 1.05;
+    position: relative;
 }
 
 #navigation_bar {
@@ -62,6 +65,7 @@ h1 {
     word-spacing: 25px;
     justify-content: right;
     position: relative;
+    padding-top: 20px
 }
 
 #nav_bar {
@@ -69,6 +73,7 @@ h1 {
     justify-content: right;
     list-style: none;
     gap: 20px;
+    
 }
 
 @media (max-width: 768px) {
