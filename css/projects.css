@@ -1,0 +1,95 @@
+section {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    background-color: hsl(0, 0%, 95%);
+    padding: 4px;
+    margin-left: 40%;
+    margin-right: 40%;
+    border: 2px solid #333
+}
+
+main ul {
+    list-style: none;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    /* 2 colonnes qui prennent 50% du parent chacune */
+    width: 100%;
+    padding-left: 15px;
+    overflow: visible
+}
+
+main ul li {
+    border: 2px solid #333;
+    /* Contour pour visualiser le conteneur */
+    padding: 10px;
+    background-color: hsl(0, 0%, 95%);
+    transform-origin: center;
+    will-change: transform;
+    position: relative;
+    transition: transform .32s ease, box-shadow .32s ease;
+
+}
+
+main ul li p {
+    color: rgb(99, 144, 212);
+    font-size: clamp(2rem, 0.75rem + 0.5vw, 2.75rem);
+    text-decoration: underline
+}
+
+main ul li .details {
+    visibility: hidden;
+    transition: opacity .18s ease;
+    margin-top: 8px;
+    color: #333333;
+    max-height: 0;
+    font-size: var(--font-size-body);
+
+}
+
+main ul li:hover .details {
+    visibility: visible;
+    opacity: 1;
+    max-height: 100%
+}
+
+/* centre les images et la légende dans chaque <li> */
+ul li figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    gap: 8px;
+}
+
+ul li figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+ul li figure figcaption {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+main ul li:hover {
+    background: linear-gradient(75deg, rgba(150, 90, 214, 0.419), #847c8633);
+    transform: scale(1.07) translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+    z-index: 10
+}
+
+/* En mobile : passe à 1 colonne */
+@media (max-width: 1025px) {
+    ul {
+        grid-template-columns: 1fr;
+        /* 1 seule colonne sur petit écran */
+    }
+}

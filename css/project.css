@@ -7,11 +7,24 @@
     height: 400px;
 }
 
+img:hover {
+
+    transform: translateY(-5px);
+    /* Soulève légèrement l’article au survol */
+    box-shadow: 0 8px 20px rgba(122, 105, 233, 0.2);
+    /* Ombre plus marquée lors du hover */
+    transform: scale(1.5);
+}
 
 /*########## MOTUS ##########*/
 #motus {
     z-index: 1;
     margin-left: 450px;
+}
+#img2 {
+    height: 50px;
+    margin: 8px;
+    width: 90%;
 }
 
 @media (max-width: 1025px) {
@@ -39,9 +52,9 @@
     }
 }
 
-
-#img2 {
-    height: 50px;
-    margin: 8px;
-    width: 90%;
+#cadre_droit ul {
+    height: 400px;
 }
+
+
+
