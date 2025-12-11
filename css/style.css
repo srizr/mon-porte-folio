@@ -1,21 +1,18 @@
 #pdp {
     width: 70%;
     height: auto;
-    /* hauteur proportionnelle */
     max-width: 100%;
     display: block;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 5px;
     border: 2px #333333;
-
 }
 
 p {
     font-size: var(--font-size-body);
     margin: 0 0 12px 0;
 }
-
 
 a {
     color: #333333;
@@ -29,27 +26,19 @@ a {
 
 figcaption {
     display: none;
-
 }
 
-
-
 body {
-    position: relative;
     background-image: url('../images/vg.png');
     background-repeat: no-repeat;
     background-size: 100% 420px;
     background-position: center 40%;
     display: flex;
-    /* ajouté */
     flex-direction: column;
-    /* ajouté */
     min-height: 100vh;
     transition: background-size var(--transition-medium) ease, height var(--transition-medium) ease, transform var(--transition-medium) ease, opacity var(--transition-fast) ease;
-
 }
 
-/* #################### header #################### */
 header {
     margin: -8px;
     padding: 30px 8px;
@@ -59,14 +48,11 @@ header {
     flex-direction: column;
 }
 
-    
-
 h1 {
     color: var(--color-text-heading);
     font-size: clamp(2rem, 1.75rem + 1vw, 2.5rem);
     margin: 0;
     line-height: 1.05;
-    position: relative;
     transform: translateY(25px);
 }
 
@@ -76,9 +62,8 @@ h1 {
     font-size: 28px;
     word-spacing: 25px;
     justify-content: right;
-    position: relative;
     padding-top: 20px;
-    transform :translateY(25px)
+    transform: translateY(25px);
 }
 
 #nav_bar {
@@ -86,7 +71,6 @@ h1 {
     justify-content: right;
     list-style: none;
     gap: 20px;
-    
 }
 
 @media (max-width: 768px) {
@@ -104,8 +88,6 @@ h1 {
         list-style: none;
         padding-left: 0;
     }
-
-
 
     #nav_bar li {
         text-align: center;
@@ -128,9 +110,6 @@ h1 {
     text-decoration-line: underline;
 }
 
-
-
-/*#################" main ###############"*/
 section {
     padding: 0.5%;
     border: 1.5px solid #333333;
@@ -140,46 +119,35 @@ section {
     max-width: 900px;
     display: flex;
     align-items: stretch;
-    position: relative;
     z-index: 1;
-    min-height: 400px
+    min-height: 400px;
+    animation: opacite 0.3s linear ;
 }
 
 main {
     margin-top: 110px;
     margin-bottom: 110px;
-    position: relative;
     flex: 1;
-
 }
 
 h2 {
-    z-index: 1;
     font-size: clamp(2rem, 1.75rem + 1vw, 2.5rem);
 }
 
-section>article {
-    /* afficher chaque article en grille 2 colonnes :
-    - dans project.html l'article unique aligne les <p> (gauche / droite)
-    - dans motus.html, les deux articles frères restent côte à côte grâce à section (display:flex) */
+section > article {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 16px;
     row-gap: 8px;
     align-items: center;
-
-    /* si plusieurs articles frères existent (motus), qu'ils partagent l'espace */
     flex: 1;
-    position: relative;
     height: 100%;
 }
 
-/* nouvelles règles pour les classes utilisées dans le HTML (tu as des <p class="cadre_gauche"> et <p class="cadre_droit">) */
 .cadre_gauche {
     grid-column: 1;
     padding-left: 16px;
     box-sizing: border-box;
-    min-height: auto
 }
 
 .cadre_droit {
@@ -189,21 +157,22 @@ section>article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* centre l'image horizontalement */
     justify-content: center;
     height: 100%;
-    overflow: hidden
+    overflow: hidden;
+}
+
+footer {
+    z-index: 1;
+    margin-top: auto;
 }
 
 
-
-/* ############## footer ############## */
-
-
-footer {
-    position: relative;
-    z-index: 1;
-    margin-top: auto;
-    /* min 32px, préférentiel 18% de la hauteur vue, max 160px */
-    /* Espace au-dessus du footer */
+@keyframes opacite {
+  0% {
+        opacity: 0%;
+     }
+  100% { 
+        opacity: 100%; 
+    }
 }

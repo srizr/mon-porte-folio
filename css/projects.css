@@ -5,10 +5,11 @@ section {
 h2 {
     text-align: center;
     background-color: hsl(0, 0%, 95%);
-    padding: 12px;
     margin-left: 35%;
     margin-right: 35%;
-    border: 2px solid #333
+    border: 2px solid #333;
+    padding: 12px;
+
 }
 
 main ul {
@@ -19,7 +20,7 @@ main ul {
     /* 2 colonnes qui prennent 50% du parent chacune */
     width: 100%;
     padding-left: 15px;
-    overflow: visible
+    overflow: visible;
 }
 
 main ul li {
@@ -93,3 +94,10 @@ main ul li:hover {
         /* 1 seule colonne sur petit écran */
     }
 }
+@media(max-width: 400px) {
+    h2 {
+        padding: 1px
+    }
+}
+
+
