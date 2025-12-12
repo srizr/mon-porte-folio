@@ -1,7 +1,7 @@
 /* ############ photo en haut  ################"*/
 
 
-section > article {
+section>article {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 16px;
@@ -21,7 +21,7 @@ section > article {
 
 /* En vertical (max-width: 768px) : layout 1 colonne avec image en haut */
 @media (max-width: 768px) {
-    section > article {
+    section>article {
         grid-template-columns: 1fr;
     }
 
@@ -58,7 +58,8 @@ section > article {
 /* ######### LI ########### */
 main ul {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 colonnes égales */
+    grid-template-columns: 1fr 1fr;
+    /* 2 colonnes égales */
     gap: 5%;
     margin-left: 10%;
 }
@@ -73,6 +74,7 @@ main ul li span:hover {
     text-decoration: underline;
     color: white;
 }
+
 img:hover {
 
     transform: translateY(-5px);
@@ -81,4 +83,3 @@ img:hover {
     /* Ombre plus marquée lors du hover */
     transform: scale(1.5);
 }
-
